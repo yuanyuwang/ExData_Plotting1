@@ -10,7 +10,7 @@ data<-transform(data, Time = strptime(Time, format="%H:%M:%S"))
 data<-transform(data, Global_active_power = as.numeric(Global_active_power))
 
 #drawgraph
-dev.set(dev.prev())
+#dev.set(dev.prev())
 png(filename = "plot1.png", width = 480, height = 480, units = "px")
 hist(data$Global_active_power, main="Global Active Power",xlab="Global Active Power (kilowatts)", col="red")
 dev.off()
